@@ -1,0 +1,17 @@
+:root {
+   --base-size: 1440;
+   --scaler: 1;
+
+   @include media("<=tablet") {
+      --base-size: 981;
+   }
+
+   @include media("<=phone") {
+      --base-size: 480;
+   }
+}
+
+@function vw($sizeInPx) {
+   $result: calc(#{$sizeInPx} / var(--base-size) * var(--scaler) * 100vw);
+   @return $result;
+}
