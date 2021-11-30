@@ -1,0 +1,124 @@
+@mixin flex-init() {
+   display: -webkit-box;
+   display: -moz-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: flex;
+}
+
+@mixin flex-direction($data) {
+   -webkit-box-flex-direction: $data;
+   -moz-box-flex-direction: $data;
+   -webkit-flex-direction: $data;
+   -ms-flex-direction: $data;
+   flex-direction: $data;
+}
+
+@mixin flex($flex) {
+   -webkit-box-flex: $flex;
+   -moz-box-flex: $flex;
+   -webkit-flex: $flex;
+   -ms-flex: $flex;
+   flex: $flex;
+}
+
+@mixin flex-basis($size) {
+   flex-basis: $size;
+   -webkit-flex-basis: $size;
+}
+
+@mixin flex-wrap($wrap: wrap) {
+   flex-wrap: $wrap;
+   -ms-flex-wrap: $wrap;
+   -webkit-flex-wrap: $wrap;
+}
+
+@mixin align-items($content) {
+   align-items: $content;
+   -webkit-align-items: $content;
+}
+
+@mixin align-self($content) {
+   align-self: $content;
+   -webkit-align-self: $content;
+}
+
+@mixin justify-content($content) {
+   justify-content: $content;
+   -webkit-justify-content: $content;
+}
+
+@mixin trans($type...) {
+   -webkit-transition: $type;
+   -moz-transition: $type;
+   -ms-transition: $type;
+   -o-transition: $type;
+   transition: $type;
+}
+
+@mixin trans-delay($delay) {
+   -webkit-transition-delay: $delay;
+   -moz-transition-delay: $delay;
+   -ms-transition-delay: $delay;
+   -o-transition-delay: $delay;
+   transition-delay: $delay;
+}
+@mixin transform($var) {
+   -webkit-transform: $var;
+   -moz-transform: $var;
+   -ms-transform: $var;
+   -o-transform: $var;
+   transform: $var;
+}
+
+@mixin translate($x, $y, $z, $important: false) {
+   @if ($important) {
+      @include transform(translate3d($x, $y, $z) !important);
+   } @else {
+      @include transform(translate3d($x, $y, $z));
+   }
+}
+
+@mixin scale($number) {
+   @include transform(scale($number));
+}
+
+@mixin rotate($degre) {
+   @include transform(rotate($degre));
+}
+
+@mixin object-fit($content) {
+   object-fit: $content;
+   -o-object-fit: $content;
+}
+
+@mixin transform-origin($origin) {
+   -webkit-transform-origin: $origin;
+   -moz-transform-origin: $origin;
+   -ms-transform-origin: $origin;
+   -o-transform-origin: $origin;
+   transform-origin: $origin;
+}
+
+@mixin gradient($color1, $color2, $deg, $start: 0%, $end: 100%) {
+   background: $color1;
+   background: -moz-linear-gradient($deg, $color1 $start, $color2 $end);
+   background: -webkit-gradient(left top, right bottom, color-stop($start, $color1), color-stop($end, $color2));
+   background: -webkit-linear-gradient($deg, $color1 $start, $color2 $end);
+   background: -o-linear-gradient($deg, $color1 $start, $color2 $end);
+   background: -ms-linear-gradient($deg, $color1 $start, $color2 $end);
+   background: linear-gradient($deg, $color1 $start, $color2 $end);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color1, endColorstr=$color2, GradientType=1);
+}
+
+@mixin color($color, $alpha: 1) {
+   color: rgba($color, $alpha);
+}
+
+@mixin no-scrollbar() {
+   &::-webkit-scrollbar {
+      display: none;
+   }
+   -ms-overflow-style: none; /* IE and Edge */
+   scrollbar-width: none; /* Firefox */
+}

@@ -1,0 +1,13 @@
+<html>
+   {% include "partials/header.twig" %}
+
+   <body>
+      {% include "components/navigation.twig" %}
+      <main id="content" class="main__content" data-scroll-container>
+         {% block content %}
+         {% endblock %}
+      </main>
+      
+      {% include "partials/footer.twig" %}
+   </body>
+</html>
