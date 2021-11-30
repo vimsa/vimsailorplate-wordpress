@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Villa Embrace
+Plugin Name: Vimsa
 */
 
 require __DIR__ . '/classes/custom-post-type-widget-blocks.php';

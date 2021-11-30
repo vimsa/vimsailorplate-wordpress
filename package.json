@@ -1,0 +1,35 @@
+{
+  "name": "vimsa-plugins",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "include-media": "^1.4.10",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@wordpress/scripts": "^19.2.2",
+    "babel-loader": "^8.2.3",
+    "babel-plugin-styled-components": "^2.0.1",
+    "file-loader": "^6.2.0",
+    "thread-loader": "^3.0.4",
+    "webpack": "^5.64.3"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^5.2.6",
+    "@wordpress/block-editor": "^8.0.5",
+    "@wordpress/blocks": "^11.1.4",
+    "@wordpress/components": "^19.0.5",
+    "@wordpress/data": "^6.1.4",
+    "@wordpress/date": "^4.2.3",
+    "@wordpress/element": "^4.0.4",
+    "@wordpress/i18n": "^4.2.4",
+    "@wordpress/url": "^3.3.1",
+    "flickity": "^2.2.2",
+    "gsap": "^3.8.0",
+    "lodash": "^4.17.21",
+    "react": "^17.0.2"
+  }
+}
